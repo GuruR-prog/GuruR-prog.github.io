@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guru Raghavendra — Engineering Leader</title>
+<meta name="description" content="Guru Raghavendra — Senior Engineering Manager with director-level scope. 20+ years building distributed systems, cloud database platforms, and engineering organizations; now applying that to production agentic AI.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Guru Raghavendra",
+  "jobTitle": "Senior Engineering Manager, Fulfillment Execution",
+  "worksFor": { "@type": "Organization", "name": "Coupang Inc." },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "UC Berkeley, Haas School of Business" },
+    { "@type": "CollegeOrUniversity", "name": "Visvesvaraya Technological University" }
+  ],
+  "email": "mailto:guru_raghavendra@berkeley.edu",
+  "url": "https://gurur-prog.github.io",
+  "sameAs": [
+    "https://www.linkedin.com/in/guru-raghavendra-a0304710/",
+    "https://github.com/GuruR-prog"
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#F4F5F7;
+    --surface:#FFFFFF;
+    --surface-2:#ECEEF1;
+    --ink:#171B21;
+    --ink-soft:#565D68;
+    --ink-faint:#88909B;
+    --line:#DEE1E6;
+    --accent:#B9791F;
+    --accent-strong:#96610D;
+    --accent-ink:#1A1204;
+    --accent-wash:#F6E9D2;
+    --good:#4C7A57;
+    --shadow: 0 1px 2px rgba(23,27,33,.04), 0 8px 24px -12px rgba(23,27,33,.10);
+    --radius: 3px;
+    --font-display:'IBM Plex Serif', Georgia, 'Iowan Old Style', serif;
+    --font-body:'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-mono:'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0F141C;
+      --surface:#161D28;
+      --surface-2:#1D2530;
+      --ink:#E7E9ED;
+      --ink-soft:#A2A9B4;
+      --ink-faint:#6C7684;
+      --line:#28313D;
+      --accent:#E0A94A;
+      --accent-strong:#F0BE6C;
+      --accent-ink:#20150300;
+      --accent-wash:#2E2308;
+      --good:#7FB78C;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -16px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F141C; --surface:#161D28; --surface-2:#1D2530; --ink:#E7E9ED; --ink-soft:#A2A9B4;
+    --ink-faint:#6C7684; --line:#28313D; --accent:#E0A94A; --accent-strong:#F0BE6C;
+    --accent-wash:#2E2308; --good:#7FB78C;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -16px rgba(0,0,0,.55);
+  }
+  :root[data-theme="light"]{
+    --bg:#F4F5F7; --surface:#FFFFFF; --surface-2:#ECEEF1; --ink:#171B21; --ink-soft:#565D68;
+    --ink-faint:#88909B; --line:#DEE1E6; --accent:#B9791F; --accent-strong:#96610D;
+    --accent-wash:#F6E9D2; --good:#4C7A57;
+    --shadow: 0 1px 2px rgba(23,27,33,.04), 0 8px 24px -12px rgba(23,27,33,.10);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--font-body); font-size:16px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:var(--font-display); text-wrap:balance; margin:0; color:var(--ink);}
+  a{color:inherit;}
+  ::selection{background:var(--accent-wash); color:var(--accent-ink,var(--ink));}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .wrap{max-width:960px; margin:0 auto; padding:0 1.5rem;}
+  .prose{max-width:62ch;}
+
+  .eyebrow{
+    font-family:var(--font-mono); font-size:.75rem; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:.6em;
+  }
+  .eyebrow::before{content:""; width:1.1em; height:1px; background:var(--accent); display:inline-block;}
+
+  /* ---------- header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:20; backdrop-filter:blur(10px) saturate(1.4);
+    background:color-mix(in srgb, var(--bg) 82%, transparent); border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:.9rem 1.5rem; max-width:960px; margin:0 auto;}
+  .nav-mark{font-family:var(--font-mono); font-size:.9rem; color:var(--ink-soft); text-decoration:none;}
+  .nav-mark strong{color:var(--ink); font-weight:500;}
+  nav.links{display:flex; gap:1.4rem; font-size:.875rem;}
+  nav.links a{text-decoration:none; color:var(--ink-soft); transition:color .15s;}
+  nav.links a:hover{color:var(--accent);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:4.5rem 0 3.5rem;}
+  .hero h1{font-size:clamp(2.1rem, 5vw, 3.1rem); font-weight:600; margin:.5rem 0 .3rem;}
+  .role-line{
+    font-family:var(--font-mono); font-size:1rem; color:var(--accent-strong); margin:0 0 1.4rem;
+    font-weight:500;
+  }
+  .status-chip{
+    display:inline-flex; align-items:center; gap:.55em; font-family:var(--font-mono); font-size:.8rem;
+    color:var(--ink-soft); background:var(--surface); border:1px solid var(--line); border-radius:99px;
+    padding:.4em .9em 0.4em .7em; margin-bottom:1.6rem;
+  }
+  .status-dot{width:7px; height:7px; border-radius:50%; background:var(--good); position:relative; flex:none;}
+  .status-dot::after{
+    content:""; position:absolute; inset:-4px; border-radius:50%; border:1px solid var(--good);
+    opacity:.6; animation:pulse 2.4s ease-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce){ .status-dot::after{ animation:none; } }
+  @keyframes pulse{ 0%{transform:scale(.6); opacity:.7;} 100%{transform:scale(1.9); opacity:0;} }
+
+  .hero p.lede{font-size:1.08rem; color:var(--ink-soft); margin:0 0 1.8rem;}
+
+  .contact-row{display:flex; flex-wrap:wrap; gap:1.4rem; font-size:.9rem;}
+  .contact-row a{text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px; transition:border-color .15s, color .15s;}
+  .contact-row a:hover{color:var(--accent); border-color:var(--accent);}
+  .contact-row span.loc{color:var(--ink-faint);}
+
+  /* ---------- section shell ---------- */
+  section{padding:3.6rem 0;}
+  section + section{border-top:1px solid var(--line);}
+  .section-head{margin-bottom:2.2rem;}
+  .section-head h2{font-size:clamp(1.4rem,3vw,1.7rem); font-weight:600; margin-top:.5rem;}
+
+  /* ---------- experience timeline ---------- */
+  .timeline{position:relative; padding-left:1.6rem;}
+  .timeline::before{content:""; position:absolute; left:4px; top:.5rem; bottom:.5rem; width:1px; background:var(--line);}
+  .role{position:relative; padding-bottom:2.4rem;}
+  .role:last-child{padding-bottom:0;}
+  .role::before{
+    content:""; position:absolute; left:-1.6rem; top:.4rem; width:9px; height:9px; border-radius:50%;
+    background:var(--ink-faint); border:2px solid var(--bg); box-shadow:0 0 0 1px var(--line);
+  }
+  .role.current::before{background:var(--accent); box-shadow:0 0 0 1px var(--accent);}
+  .role-top{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.4rem 1rem;}
+  .role-title{font-size:1.05rem; font-weight:600; color:var(--ink);}
+  .role-org{color:var(--ink-soft); font-weight:400;}
+  .role-dates{font-family:var(--font-mono); font-size:.78rem; color:var(--ink-faint); white-space:nowrap; font-variant-numeric:tabular-nums;}
+  .role-loc{font-family:var(--font-mono); font-size:.78rem; color:var(--ink-faint); margin-top:.15rem;}
+  .role ul{margin:.9rem 0 0; padding-left:1.15rem; color:var(--ink-soft); font-size:.94rem;}
+  .role li{margin-bottom:.5rem;}
+  .role li::marker{color:var(--ink-faint);}
+  .role li strong{color:var(--ink); font-weight:600;}
+
+  .tag-row{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.9rem;}
+  .tag{
+    font-family:var(--font-mono); font-size:.7rem; letter-spacing:.02em; color:var(--accent-strong);
+    background:var(--accent-wash); border-radius:99px; padding:.28em .7em;
+  }
+
+  .nordstrom-sub{margin-top:1rem; padding-left:1rem; border-left:2px solid var(--line);}
+  .nordstrom-sub .sub-role{margin-bottom:1.1rem;}
+  .nordstrom-sub .sub-role:last-child{margin-bottom:0;}
+  .sub-title{font-weight:600; font-size:.92rem; color:var(--ink);}
+  .sub-dates{font-family:var(--font-mono); font-size:.72rem; color:var(--ink-faint); font-variant-numeric:tabular-nums;}
+  .sub-role p{margin:.3rem 0 0; font-size:.88rem; color:var(--ink-soft);}
+
+  .earlier{margin-top:2.6rem;}
+  .earlier-head{font-family:var(--font-mono); font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:1rem;}
+  .earlier-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:.3rem 1rem; padding:.6rem 0; border-top:1px solid var(--line); font-size:.88rem;}
+  .earlier-row:last-child{border-bottom:1px solid var(--line);}
+  .earlier-role{color:var(--ink);}
+  .earlier-org{color:var(--ink-soft);}
+  .earlier-dates{font-family:var(--font-mono); font-size:.76rem; color:var(--ink-faint); white-space:nowrap; font-variant-numeric:tabular-nums;}
+
+  /* ---------- projects ---------- */
+  .grid-projects{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:1.1rem;}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.3rem 1.3rem 1.4rem;
+    box-shadow:var(--shadow); display:flex; flex-direction:column; gap:.6rem; transition:transform .18s ease, border-color .18s ease;
+  }
+  .card:hover{transform:translateY(-2px); border-color:var(--accent);}
+  .card h3{font-size:1rem; font-weight:600; font-family:var(--font-body);}
+  .card p{margin:0; font-size:.88rem; color:var(--ink-soft); flex:1;}
+  .card .tag-row{margin-top:.2rem;}
+  .card.placeholder{border-style:dashed; opacity:.72;}
+  .card.placeholder:hover{transform:none; border-color:var(--line);}
+  .card-org{font-family:var(--font-mono); font-size:.72rem; color:var(--ink-faint);}
+  .card-link{font-size:.82rem; color:var(--accent-strong); text-decoration:none; margin-top:.2rem;}
+  .card-link:hover{text-decoration:underline;}
+
+  /* ---------- skills ---------- */
+  .skill-group{margin-bottom:1.6rem;}
+  .skill-group:last-child{margin-bottom:0;}
+  .skill-group h3{font-family:var(--font-mono); font-size:.78rem; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-faint); font-weight:500; margin-bottom:.75rem;}
+  .chip-row{display:flex; flex-wrap:wrap; gap:.5rem;}
+  .chip{
+    font-size:.82rem; color:var(--ink); background:var(--surface-2); border:1px solid var(--line);
+    border-radius:99px; padding:.35em .85em;
+  }
+
+  /* ---------- education / certs ---------- */
+  .ed-grid{display:grid; grid-template-columns:1fr 1fr; gap:2.4rem;}
+  @media (max-width:680px){ .ed-grid{grid-template-columns:1fr;} }
+  .ed-item{margin-bottom:1.1rem;}
+  .ed-item:last-child{margin-bottom:0;}
+  .ed-degree{font-weight:600; font-size:.95rem;}
+  .ed-school{color:var(--ink-soft); font-size:.9rem;}
+  .ed-year{font-family:var(--font-mono); font-size:.76rem; color:var(--ink-faint); font-variant-numeric:tabular-nums;}
+  .cert-list{list-style:none; margin:0; padding:0; font-size:.9rem;}
+  .cert-list li{padding:.5rem 0; border-top:1px solid var(--line); color:var(--ink-soft); display:flex; gap:.6em;}
+  .cert-list li:last-child{border-bottom:1px solid var(--line);}
+  .cert-list li::before{content:"✓"; color:var(--good); font-family:var(--font-mono); flex:none;}
+
+  .honors{margin-top:2.4rem; font-size:.86rem; color:var(--ink-faint);}
+  .honors strong{color:var(--ink-soft); font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; display:block; margin-bottom:.6rem;}
+
+  /* ---------- footer ---------- */
+  footer{padding:3rem 0 4rem;}
+  .footer-inner{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1.5rem;}
+  .footer-inner h2{font-size:1.5rem; font-weight:600;}
+  .footer-inner p{color:var(--ink-soft); margin:.5rem 0 1.3rem; max-width:40ch;}
+  .btn{
+    display:inline-flex; align-items:center; gap:.5em; background:var(--accent); color:#1A1204;
+    text-decoration:none; font-weight:600; font-size:.88rem; padding:.7em 1.2em; border-radius:var(--radius);
+    transition:background .15s;
+  }
+  .btn:hover{background:var(--accent-strong);}
+  .footer-links{display:flex; gap:1.3rem; font-size:.85rem;}
+  .footer-links a{text-decoration:none; color:var(--ink-soft);}
+  .footer-links a:hover{color:var(--accent);}
+  .fine-print{margin-top:2.4rem; padding-top:1.4rem; border-top:1px solid var(--line); font-size:.78rem; color:var(--ink-faint); font-family:var(--font-mono);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top">~/<strong>guru-raghavendra</strong></a>
+    <nav class="links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">~/about</p>
+      <h1>Guru Raghavendra</h1>
+      <p class="role-line">Senior Engineering Manager — Director-Level Scope</p>
+
+      <span class="status-chip"><span class="status-dot"></span> Currently building Fulfillment Execution engineering at Coupang</span>
+
+      <p class="lede prose">
+        Twenty-plus years building and scaling distributed systems, cloud database platforms, and the engineering
+        organizations behind them — release pipelines for Amazon Aurora PostgreSQL, fulfillment systems moving
+        millions of shipments a day, e-commerce platforms carrying multi-billion-dollar traffic. Lately I've been
+        pointing that experience at a newer problem: getting retrieval-augmented and agentic AI systems into
+        production as tools engineers actually rely on, not demos.
+      </p>
+
+      <div class="contact-row">
+        <a href="mailto:guru_raghavendra@berkeley.edu">guru_raghavendra@berkeley.edu</a>
+        <a href="https://www.linkedin.com/in/guru-raghavendra-a0304710/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/GuruR-prog" target="_blank" rel="noopener">GitHub</a>
+        <span class="loc">Greater Seattle Area</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">~/experience</p>
+        <h2>Where I've built things</h2>
+      </div>
+
+      <div class="timeline">
+
+        <article class="role current">
+          <div class="role-top">
+            <div><span class="role-title">Senior Software Engineering Manager (L6-2)</span> <span class="role-org">— Coupang Inc.</span></div>
+            <div class="role-dates">Mar 2025 — Present</div>
+          </div>
+          <div class="role-loc">Seattle, WA · Fulfillment Execution, serving Korea &amp; Taiwan</div>
+          <ul>
+            <li>Lead a 20-engineer organization building real-time fulfillment execution, routing, and SLA-critical logistics systems powering millions of daily shipments.</li>
+            <li>Delivered a company-wide <strong>PII/privacy transformation</strong>, removing raw address data from fulfillment systems in favor of a centralized anonymized-address architecture.</li>
+            <li>Established SLO-driven engineering and on-call process improvements that <strong>cut Sev-1/Sev-2 incidents by 50%</strong>.</li>
+            <li>Owned quarterly technical OKRs: Jenkins → Kubernetes migration, JDK 17 / Spring 6 upgrades, sustained AWS cost reductions.</li>
+            <li>Built a 9-engineer offshore team in Bangalore, running a 24/5 follow-the-sun model; promoted an SDE into their first management role.</li>
+            <li>Shipped three internal AI tools: an OKR dashboard pulling live status from Jira via MCP, a Claude-powered first-pass code review app, and a Slack bot that summarizes on-call alerts across shift handoffs.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Agentic AI / MCP</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Reliability Eng.</span>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-top">
+            <div><span class="role-title">Software Development Manager, RDS Aurora PostgreSQL</span> <span class="role-org">— Amazon Web Services</span></div>
+            <div class="role-dates">Apr 2022 — Mar 2025</div>
+          </div>
+          <div class="role-loc">Seattle, WA · Cloud-native distributed platform engineering</div>
+          <ul>
+            <li>Led engineering for Aurora PostgreSQL's release lifecycle, automation, and security patching — a mission-critical managed database platform for government, fintech, and enterprise workloads.</li>
+            <li>Architected <strong>100% zero-touch multi-region deployment automation</strong>, eliminating manual operations across Aurora's global rollout.</li>
+            <li>Built automated CI/CD pipelines that increased release velocity by <strong>50%+</strong> with full validation and rollback controls.</li>
+            <li>Built a 9-SDE engineering organization from zero in under a year — team charter, hiring bar, onboarding, delivery framework.</li>
+            <li>Held every CVE with CVSS &gt; 7 to strict patching SLAs, in a platform serving regulated industries.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Distributed DB Systems</span>
+            <span class="tag">Security / Compliance</span>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-top">
+            <div><span class="role-title">Nordstrom Inc.</span></div>
+            <div class="role-dates">Jan 2016 — Apr 2022 · 6 yr 4 mo</div>
+          </div>
+          <div class="role-loc">Seattle, WA · eCommerce &amp; Merchandising platforms — progressed through three roles</div>
+          <div class="nordstrom-sub">
+            <div class="sub-role">
+              <div class="sub-title">Senior Manager, Engineering — Product Details Page <span class="sub-dates">· Dec 2020 – Apr 2022</span></div>
+              <p>Led engineering for Nordstrom.com, Nordstrom.ca, and NordstromRack.com's PDP, SEO, reviews, and experimentation systems. Scaled the team from 8 to 15 across Seattle, Guadalajara, and Kyiv; held near-zero downtime through Anniversary Sale, Black Friday, and Cyber Monday.</p>
+            </div>
+            <div class="sub-role">
+              <div class="sub-title">Engineering Manager <span class="sub-dates">· Oct 2018 – Dec 2020</span></div>
+              <p>Managed 3 teams (20 engineers) across Pricing, Allocation, Ordering, and Merchandising. Led the re-platforming of on-prem Master Data Management systems to AWS, delivering <strong>~$3M in annual savings</strong>. Championed DEI hiring through the Ada Developers Academy partnership.</p>
+            </div>
+            <div class="sub-role">
+              <div class="sub-title">Senior Solutions Architect <span class="sub-dates">· Jan 2016 – Oct 2018</span></div>
+              <p>Set technology strategy and domain roadmaps for Pricing, Ordering, and Allocation; led the transition of legacy Oracle/Java systems to AWS and GCP.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="earlier">
+        <p class="earlier-head">Earlier — Enterprise Architecture &amp; Consulting</p>
+        <div class="earlier-row">
+          <div><span class="earlier-role">Enterprise Architect</span> <span class="earlier-org">— Ascena Retail Group, Columbus, OH</span></div>
+          <div class="earlier-dates">2015</div>
+        </div>
+        <div class="earlier-row">
+          <div><span class="earlier-role">Technology Architect / Client Engagement Lead</span> <span class="earlier-org">— Infosys (Nordstrom account), Seattle, WA</span></div>
+          <div class="earlier-dates">2012 – 2015</div>
+        </div>
+        <div class="earlier-row">
+          <div><span class="earlier-role">Senior Consultant / Solutions Architect</span> <span class="earlier-org">— Oracle SSI, Bangalore, India</span></div>
+          <div class="earlier-dates">2008 – 2012</div>
+        </div>
+        <div class="earlier-row">
+          <div><span class="earlier-role">Senior Software Engineer</span> <span class="earlier-org">— HP · Robert Bosch · Kirloskar Electric, India</span></div>
+          <div class="earlier-dates">2003 – 2008</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">~/projects</p>
+        <h2>What I've been building with agentic AI</h2>
+      </div>
+      <div class="grid-projects">
+
+        <div class="card">
+          <span class="card-org">Personal Project · Open Source</span>
+          <h3>Looking Glass — Team Jira Dashboard</h3>
+          <p>A clean-room rebuild of an internal OKR/on-call tool I built at work: a live multi-team dashboard over Jira with sprint completion tracking and on-call incident correlation against PagerDuty, plus an MCP server exposing the same data to Claude Desktop.</p>
+          <div class="tag-row"><span class="tag">Agentic AI</span><span class="tag">MCP</span><span class="tag">React</span></div>
+          <a class="card-link" href="https://github.com/GuruR-prog/jira-okr-dashboard-mcp" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+
+        <div class="card">
+          <span class="card-org">Coupang · Internal Tool</span>
+          <h3>Claude-Powered Code Review</h3>
+          <p>An application that gives engineers automated first-pass review feedback, improving review consistency and cutting the load on human reviewers.</p>
+          <div class="tag-row"><span class="tag">Claude</span><span class="tag">Dev Tooling</span></div>
+        </div>
+
+        <div class="card">
+          <span class="card-org">Coupang · Internal Tool</span>
+          <h3>On-Call Alert Summarizer</h3>
+          <p>A Slack app that summarizes on-call alerts and flags what got missed mid-shift, cutting handoff time and reducing dropped incidents.</p>
+          <div class="tag-row"><span class="tag">Agentic AI</span><span class="tag">Slack</span></div>
+        </div>
+
+        <div class="card">
+          <span class="card-org">IBM · Coursera Capstone</span>
+          <h3>Agentic Restaurant Ops Pipeline</h3>
+          <p>A multi-step agentic workflow built through IBM's RAG and Agentic AI specialization, applying agent orchestration to restaurant operations data using watsonx.</p>
+          <div class="tag-row"><span class="tag">watsonx</span><span class="tag">RAG</span></div>
+        </div>
+
+        <div class="card">
+          <span class="card-org">Personal Project</span>
+          <h3>StockScreener</h3>
+          <p>An iOS stock screener implementing rules-based "No Nonsense" screening criteria for evaluating equities.</p>
+          <div class="tag-row"><span class="tag">Swift</span><span class="tag">iOS</span></div>
+          <a class="card-link" href="https://github.com/GuruR-prog/StockScreener" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+
+        <div class="card placeholder" id="chatbot">
+          <span class="card-org">In Progress</span>
+          <h3>Ask-Me-Anything Chatbot</h3>
+          <p>An assistant that can answer questions about my background, experience, and projects directly on this site. Building it next.</p>
+          <div class="tag-row"><span class="tag">Coming soon</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">~/skills</p>
+        <h2>Stack &amp; competencies</h2>
+      </div>
+
+      <div class="skill-group">
+        <h3>Agentic AI &amp; LLM Systems</h3>
+        <div class="chip-row">
+          <span class="chip">RAG Pipelines</span><span class="chip">LangChain</span><span class="chip">LangGraph</span>
+          <span class="chip">CrewAI</span><span class="chip">AutoGen</span><span class="chip">BeeAI</span>
+          <span class="chip">Model Context Protocol</span><span class="chip">AWS Bedrock</span>
+          <span class="chip">Claude / Anthropic API</span><span class="chip">Vector Retrieval</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Cloud &amp; Distributed Systems</h3>
+        <div class="chip-row">
+          <span class="chip">AWS (EC2, ECS, EKS, RDS)</span><span class="chip">Kubernetes</span><span class="chip">Kafka</span>
+          <span class="chip">Aurora PostgreSQL</span><span class="chip">Microservices</span><span class="chip">Event-Driven Systems</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Languages &amp; Data</h3>
+        <div class="chip-row">
+          <span class="chip">Java</span><span class="chip">Python</span><span class="chip">SQL / PL-SQL</span><span class="chip">Swift</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Reliability &amp; Observability</h3>
+        <div class="chip-row">
+          <span class="chip">SLO / SLA Engineering</span><span class="chip">Disaster Recovery</span><span class="chip">Chaos Engineering</span>
+          <span class="chip">Splunk</span><span class="chip">Datadog</span><span class="chip">Grafana</span><span class="chip">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Leadership &amp; Org Building</h3>
+        <div class="chip-row">
+          <span class="chip">Global / Offshore Team Building</span><span class="chip">Hiring &amp; Talent Development</span>
+          <span class="chip">Cross-Functional Leadership</span><span class="chip">DEI Hiring</span><span class="chip">Technical Roadmap &amp; OKR Ownership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">~/education</p>
+        <h2>Education &amp; certifications</h2>
+      </div>
+
+      <div class="ed-grid">
+        <div>
+          <div class="ed-item">
+            <div class="ed-degree">MBA, Corporate Finance &amp; Operations Management</div>
+            <div class="ed-school">UC Berkeley, Haas School of Business</div>
+            <div class="ed-year">2020 – 2022</div>
+          </div>
+          <div class="ed-item">
+            <div class="ed-degree">B.E., Instrumentation &amp; Electronics</div>
+            <div class="ed-school">Visvesvaraya Technological University</div>
+            <div class="ed-year">1999 – 2003</div>
+          </div>
+
+          <div class="honors">
+            <strong>Honors</strong>
+            Most Valuable Player (×2) · Bravo Award · Shining Star — Infosys Limited
+          </div>
+        </div>
+
+        <ul class="cert-list">
+          <li>IBM RAG and Agentic AI Specialization</li>
+          <li>Fundamentals of Building AI Agents — IBM</li>
+          <li>Agentic AI with LangChain and LangGraph — IBM</li>
+          <li>Agentic AI with LangGraph, CrewAI, AutoGen &amp; BeeAI — IBM</li>
+          <li>Build Multimodal Generative AI Applications — IBM</li>
+          <li>AWS Certified Developer</li>
+          <li>TOGAF Certified Enterprise Architect</li>
+          <li>Oracle Certified Developer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <h2>Let's talk.</h2>
+          <p>Open to conversations on engineering leadership, agentic AI in production, or anything in between.</p>
+          <a class="btn" href="mailto:guru_raghavendra@berkeley.edu">Email me →</a>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/guru-raghavendra-a0304710/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/GuruR-prog" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="fine-print">Guru Raghavendra · Greater Seattle Area · Updated 2026</div>
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>
