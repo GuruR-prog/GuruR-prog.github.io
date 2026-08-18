@@ -178,12 +178,15 @@
   .sub-role p{margin:.3rem 0 0; font-size:.88rem; color:var(--ink-soft);}
 
   .earlier{margin-top:2.6rem;}
-  .earlier-head{font-family:var(--font-mono); font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:1rem;}
-  .earlier-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:.3rem 1rem; padding:.6rem 0; border-top:1px solid var(--line); font-size:.88rem;}
+  .earlier-head{font-family:var(--font-mono); font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin-bottom:.6rem;}
+  .earlier-intro{font-size:.92rem; color:var(--ink-soft); margin:0 0 1.2rem; max-width:62ch;}
+  .earlier-row{padding:.9rem 0; border-top:1px solid var(--line); font-size:.88rem;}
   .earlier-row:last-child{border-bottom:1px solid var(--line);}
+  .earlier-row-top{display:flex; flex-wrap:wrap; justify-content:space-between; gap:.3rem 1rem;}
   .earlier-role{color:var(--ink);}
   .earlier-org{color:var(--ink-soft);}
   .earlier-dates{font-family:var(--font-mono); font-size:.76rem; color:var(--ink-faint); white-space:nowrap; font-variant-numeric:tabular-nums;}
+  .earlier-desc{margin:.5rem 0 0; color:var(--ink-soft); font-size:.86rem; max-width:64ch;}
 
   /* ---------- projects ---------- */
   .grid-projects{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:1.1rem;}
@@ -242,6 +245,44 @@
   .footer-links a{text-decoration:none; color:var(--ink-soft);}
   .footer-links a:hover{color:var(--accent);}
   .fine-print{margin-top:2.4rem; padding-top:1.4rem; border-top:1px solid var(--line); font-size:.78rem; color:var(--ink-faint); font-family:var(--font-mono);}
+
+  /* ---------- chat widget ---------- */
+  .chat-fab{
+    position:fixed; right:1.5rem; bottom:1.5rem; z-index:50;
+    width:3.4rem; height:3.4rem; border-radius:50%; border:none;
+    background:var(--accent); color:var(--accent-ink); cursor:pointer;
+    box-shadow:var(--shadow); font-size:1.4rem; display:flex; align-items:center; justify-content:center;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .chat-fab:hover{transform:scale(1.06); background:var(--accent-strong);}
+  .chat-panel{
+    position:fixed; right:1.5rem; bottom:5.4rem; z-index:50;
+    width:min(380px, calc(100vw - 3rem)); height:min(520px, calc(100vh - 8rem));
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    box-shadow:var(--shadow); display:none; flex-direction:column; overflow:hidden;
+  }
+  .chat-panel.open{display:flex;}
+  .chat-panel-head{padding:.9rem 1.1rem; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between;}
+  .chat-panel-head h3{font-size:.95rem; font-weight:600; font-family:var(--font-body); margin:0;}
+  .chat-panel-head p{margin:.15rem 0 0; font-size:.72rem; color:var(--ink-faint); font-family:var(--font-mono);}
+  .chat-close{background:none; border:none; font-size:1.3rem; color:var(--ink-faint); cursor:pointer; line-height:1; padding:.2rem;}
+  .chat-close:hover{color:var(--ink);}
+  .chat-messages{flex:1; overflow-y:auto; padding:1rem 1.1rem; display:flex; flex-direction:column; gap:.8rem;}
+  .chat-msg{font-size:.85rem; line-height:1.5; max-width:88%; white-space:pre-wrap;}
+  .chat-msg-user{align-self:flex-end; background:var(--accent-wash); color:var(--accent-ink,var(--ink)); border-radius:10px 10px 2px 10px; padding:.55em .8em;}
+  .chat-msg-assistant{align-self:flex-start; background:var(--surface-2); border-radius:10px 10px 10px 2px; padding:.55em .8em;}
+  .chat-msg-error{align-self:flex-start; color:var(--ink-faint); font-style:italic; font-size:.8rem;}
+  .chat-msg-hint{color:var(--ink-faint); font-size:.82rem; line-height:1.5;}
+  .chat-input-row{border-top:1px solid var(--line); padding:.7rem; display:flex; gap:.5rem;}
+  .chat-input{
+    flex:1; border:1px solid var(--line); border-radius:6px; padding:.5em .7em; font-family:var(--font-body);
+    font-size:.85rem; background:var(--bg); color:var(--ink); resize:none;
+  }
+  .chat-send{
+    background:var(--accent); color:var(--accent-ink); border:none; border-radius:6px; padding:0 .9em;
+    font-weight:600; font-size:.82rem; cursor:pointer;
+  }
+  .chat-send:disabled{opacity:.5; cursor:not-allowed;}
 </style>
 </head>
 <body>
@@ -324,7 +365,8 @@
           <div class="role-loc">Seattle, WA · Cloud-native distributed platform engineering</div>
           <ul>
             <li>Led engineering for Aurora PostgreSQL's release lifecycle, automation, and security patching — a mission-critical managed database platform for government, fintech, and enterprise workloads.</li>
-            <li>Architected <strong>100% zero-touch multi-region deployment automation</strong>, eliminating manual operations across Aurora's global rollout.</li>
+            <li>Led <strong>100% zero-touch multi-region deployment automation</strong>, eliminating manual operations across Aurora's global rollout.</li>
+            <li>Led several <strong>first-of-its-kind</strong> minor and major version releases in record time — including Aurora PostgreSQL 16, released in preview <strong>ahead of AWS re:Invent</strong> for the first time under my leadership.</li>
             <li>Built automated CI/CD pipelines that increased release velocity by <strong>50%+</strong> with full validation and rollback controls.</li>
             <li>Built a 9-SDE engineering organization from zero in under a year — team charter, hiring bar, onboarding, delivery framework.</li>
             <li>Held every CVE with CVSS &gt; 7 to strict patching SLAs, in a platform serving regulated industries.</li>
@@ -344,11 +386,11 @@
           <div class="nordstrom-sub">
             <div class="sub-role">
               <div class="sub-title">Senior Manager, Engineering — Product Details Page <span class="sub-dates">· Dec 2020 – Apr 2022</span></div>
-              <p>Led engineering for Nordstrom.com, Nordstrom.ca, and NordstromRack.com's PDP, SEO, reviews, and experimentation systems. Scaled the team from 8 to 15 across Seattle, Guadalajara, and Kyiv; held near-zero downtime through Anniversary Sale, Black Friday, and Cyber Monday.</p>
+              <p>Led engineering for Nordstrom.com, Nordstrom.ca, and NordstromRack.com's PDP, SEO, reviews, and experimentation systems. Owned the A/B testing platform and experimentation process using Optimizely. Scaled the team from 8 to 15 across Seattle, Guadalajara, and Kyiv; held near-zero downtime through Anniversary Sale, Black Friday, and Cyber Monday.</p>
             </div>
             <div class="sub-role">
               <div class="sub-title">Engineering Manager <span class="sub-dates">· Oct 2018 – Dec 2020</span></div>
-              <p>Managed 3 teams (20 engineers) across Pricing, Allocation, Ordering, and Merchandising. Led the re-platforming of on-prem Master Data Management systems to AWS, delivering <strong>~$3M in annual savings</strong>. Championed DEI hiring through the Ada Developers Academy partnership.</p>
+              <p>Managed 3 teams (20 engineers) across Pricing, Allocation, Ordering, and Merchandising. Led the re-platforming of on-prem Master Data Management systems to AWS Distributed Systems, delivering <strong>~$3M in annual savings</strong>.</p>
             </div>
             <div class="sub-role">
               <div class="sub-title">Senior Solutions Architect <span class="sub-dates">· Jan 2016 – Oct 2018</span></div>
@@ -360,22 +402,38 @@
       </div>
 
       <div class="earlier">
-        <p class="earlier-head">Earlier — Enterprise Architecture &amp; Consulting</p>
+        <p class="earlier-head">Earlier — Architecture &amp; Consulting Experience</p>
+        <p class="earlier-intro">Client-facing enterprise solution architecture and cloud platform delivery across Financial Services, Retail, and Manufacturing:</p>
+
         <div class="earlier-row">
-          <div><span class="earlier-role">Enterprise Architect</span> <span class="earlier-org">— Ascena Retail Group, Columbus, OH</span></div>
-          <div class="earlier-dates">2015</div>
+          <div class="earlier-row-top">
+            <div><span class="earlier-role">Enterprise Architect</span> <span class="earlier-org">— Ascena Retail Group, Columbus, OH</span></div>
+            <div class="earlier-dates">2015</div>
+          </div>
+          <p class="earlier-desc">Owned enterprise technology architecture and governance for a multi-brand retail organization. Defined reference architectures, technology standards, and cloud modernization roadmap across business units.</p>
         </div>
+
         <div class="earlier-row">
-          <div><span class="earlier-role">Technology Architect / Client Engagement Lead</span> <span class="earlier-org">— Infosys (Nordstrom account), Seattle, WA</span></div>
-          <div class="earlier-dates">2012 – 2015</div>
+          <div class="earlier-row-top">
+            <div><span class="earlier-role">Solution Architect / Client Lead</span> <span class="earlier-org">— Infosys Limited (Nordstrom Account), Seattle, WA</span></div>
+            <div class="earlier-dates">2012 – 2015</div>
+          </div>
+          <p class="earlier-desc">Client-facing Solution Architect and engagement lead for Nordstrom's technology account. Owned end-to-end solution design from requirements through production for the Oracle Retail (RMS and RPM) rollout to Canada, designed integration architectures, and delivered cloud modernization workstreams across multi-phase engagements.</p>
         </div>
+
         <div class="earlier-row">
-          <div><span class="earlier-role">Senior Consultant / Solutions Architect</span> <span class="earlier-org">— Oracle SSI, Bangalore, India</span></div>
-          <div class="earlier-dates">2008 – 2012</div>
+          <div class="earlier-row-top">
+            <div><span class="earlier-role">Senior Consultant / Solution Architect</span> <span class="earlier-org">— Oracle Corporation, Bangalore, India</span></div>
+            <div class="earlier-dates">2008 – 2012</div>
+          </div>
+          <p class="earlier-desc">Delivered Oracle Retail ERP (RMS, ReSA, RPM, ReIM), Financial, and supply chain platform implementations for enterprise clients across Financial Services, Retail, and Manufacturing. Designed REST/SOAP integration architectures, authored platform reference architectures, and served as client-facing technical advisor through the full delivery lifecycle.</p>
         </div>
+
         <div class="earlier-row">
-          <div><span class="earlier-role">Senior Software Engineer</span> <span class="earlier-org">— HP · Robert Bosch · Kirloskar Electric, India</span></div>
-          <div class="earlier-dates">2003 – 2008</div>
+          <div class="earlier-row-top">
+            <div><span class="earlier-role">Senior Software Engineer</span> <span class="earlier-org">— HP · Robert Bosch · Kirloskar Electric, India</span></div>
+            <div class="earlier-dates">2003 – 2008</div>
+          </div>
         </div>
       </div>
     </div>
@@ -545,6 +603,116 @@
   </footer>
 
 </main>
+
+<button type="button" class="chat-fab" id="chat-fab" aria-label="Ask about Guru" aria-expanded="false">💬</button>
+
+<div class="chat-panel" id="chat-panel" role="dialog" aria-label="Ask about Guru">
+  <div class="chat-panel-head">
+    <div>
+      <h3>Ask about Guru</h3>
+      <p>Answers pull from the résumé on this page</p>
+    </div>
+    <button type="button" class="chat-close" id="chat-close" aria-label="Close">×</button>
+  </div>
+  <div class="chat-messages" id="chat-messages">
+    <div class="chat-msg-hint">Try: "What's he working on at Coupang?" or "What AI frameworks does he know?"</div>
+  </div>
+  <div class="chat-input-row">
+    <textarea class="chat-input" id="chat-input" rows="1" placeholder="Ask a question…" maxlength="500"></textarea>
+    <button type="button" class="chat-send" id="chat-send">Send</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Set this to your deployed Worker URL after running the steps in
+  // chat-worker/README.md, e.g. "https://guru-site-chat.xxx.workers.dev".
+  // Left empty, the widget still opens but tells visitors it's not wired up yet.
+  var CHAT_API_URL = "";
+
+  var fab = document.getElementById('chat-fab');
+  var panel = document.getElementById('chat-panel');
+  var closeBtn = document.getElementById('chat-close');
+  var messagesEl = document.getElementById('chat-messages');
+  var input = document.getElementById('chat-input');
+  var sendBtn = document.getElementById('chat-send');
+  var history = [];
+  var sending = false;
+
+  function toggle(nextOpen) {
+    var isOpen = typeof nextOpen === 'boolean' ? nextOpen : !panel.classList.contains('open');
+    panel.classList.toggle('open', isOpen);
+    fab.setAttribute('aria-expanded', String(isOpen));
+    if (isOpen) input.focus();
+  }
+
+  fab.addEventListener('click', function () { toggle(); });
+  closeBtn.addEventListener('click', function () { toggle(false); });
+
+  function addMessage(role, text) {
+    var el = document.createElement('div');
+    el.className = 'chat-msg chat-msg-' + role;
+    el.textContent = text;
+    messagesEl.appendChild(el);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return el;
+  }
+
+  function send() {
+    if (sending) return;
+    var question = input.value.trim();
+    if (!question) return;
+
+    if (!CHAT_API_URL) {
+      addMessage('error', "The chat isn't connected yet — email Guru directly: guru_raghavendra@berkeley.edu");
+      input.value = '';
+      return;
+    }
+
+    addMessage('user', question);
+    input.value = '';
+    sending = true;
+    sendBtn.disabled = true;
+    var thinking = addMessage('assistant', 'Thinking…');
+
+    fetch(CHAT_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question: question, history: history }),
+    })
+      .then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (result) {
+        if (!result.ok || result.data.error) {
+          thinking.textContent = "Couldn't get an answer just now — try again in a moment.";
+          thinking.className = 'chat-msg chat-msg-error';
+          return;
+        }
+        thinking.textContent = result.data.answer;
+        history.push({ role: 'user', content: question });
+        history.push({ role: 'assistant', content: result.data.answer });
+      })
+      .catch(function () {
+        thinking.textContent = "Couldn't reach the server — try again in a moment.";
+        thinking.className = 'chat-msg chat-msg-error';
+      })
+      .finally(function () {
+        sending = false;
+        sendBtn.disabled = false;
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+      });
+  }
+
+  sendBtn.addEventListener('click', send);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
