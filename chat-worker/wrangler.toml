@@ -1,3 +1,14 @@
 name = "guru-site-chat"
 main = "src/index.js"
 compatibility_date = "2024-09-23"
+
+# Per-IP rate limit so a scripted client hitting this URL directly (bypassing
+# CORS, which only stops browser-based misuse) can't run up the Anthropic
+# bill. Works on the bare workers.dev subdomain — no custom domain needed.
+[[ratelimits]]
+name = "CHAT_RATE_LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60

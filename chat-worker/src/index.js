@@ -82,6 +82,12 @@ export default {
       return json({ error: "Method not allowed" }, 405);
     }
 
+    const clientIp = request.headers.get("CF-Connecting-IP") || "unknown";
+    const { success } = await env.CHAT_RATE_LIMITER.limit({ key: clientIp });
+    if (!success) {
+      return json({ error: "Too many requests — please slow down and try again in a minute." }, 429);
+    }
+
     let body;
     try {
       body = await request.json();
