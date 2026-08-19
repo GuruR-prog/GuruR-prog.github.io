@@ -59,7 +59,7 @@
       --line:#28313D;
       --accent:#E0A94A;
       --accent-strong:#F0BE6C;
-      --accent-ink:#20150300;
+      --accent-ink:#1A1204;
       --accent-wash:#2E2308;
       --good:#7FB78C;
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px -16px rgba(0,0,0,.55);
@@ -113,6 +113,17 @@
 
   /* ---------- hero ---------- */
   .hero{padding:4.5rem 0 3.5rem;}
+  .hero-grid{display:flex; align-items:flex-start; justify-content:space-between; gap:2.5rem;}
+  .hero-content{flex:1; min-width:0;}
+  .hero-photo-wrap{flex:none;}
+  .hero-photo{
+    width:180px; height:180px; border-radius:50%; object-fit:cover; object-position:50% 25%;
+    border:2px solid var(--line); box-shadow:var(--shadow); display:block;
+  }
+  @media (max-width:760px){
+    .hero-grid{flex-direction:column-reverse;}
+    .hero-photo{width:120px; height:120px;}
+  }
   .hero h1{font-size:clamp(2.1rem, 5vw, 3.1rem); font-weight:600; margin:.5rem 0 .3rem;}
   .role-line{
     font-family:var(--font-mono); font-size:1rem; color:var(--accent-strong); margin:0 0 1.4rem;
@@ -305,26 +316,31 @@
 <main id="top">
 
   <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">~/about</p>
-      <h1>Guru Raghavendra</h1>
-      <p class="role-line">Senior Engineering Manager — Director-Level Scope</p>
+    <div class="wrap hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">~/about</p>
+        <h1>Guru Raghavendra</h1>
+        <p class="role-line">Senior Engineering Manager — Director-Level Scope</p>
 
-      <span class="status-chip"><span class="status-dot"></span> Currently building Fulfillment Execution engineering at Coupang</span>
+        <span class="status-chip"><span class="status-dot"></span> Currently building Fulfillment Execution engineering at Coupang</span>
 
-      <p class="lede prose">
-        Twenty-plus years building and scaling distributed systems, cloud database platforms, and the engineering
-        organizations behind them — release pipelines for Amazon Aurora PostgreSQL, fulfillment systems moving
-        millions of shipments a day, e-commerce platforms carrying multi-billion-dollar traffic. Lately I've been
-        pointing that experience at a newer problem: getting retrieval-augmented and agentic AI systems into
-        production as tools engineers actually rely on, not demos.
-      </p>
+        <p class="lede prose">
+          Twenty-plus years building and scaling distributed systems, cloud database platforms, and the engineering
+          organizations behind them — release pipelines for Amazon Aurora PostgreSQL, fulfillment systems moving
+          millions of shipments a day, e-commerce platforms carrying multi-billion-dollar traffic. Lately I've been
+          pointing that experience at a newer problem: getting retrieval-augmented and agentic AI systems into
+          production as tools engineers actually rely on, not demos.
+        </p>
 
-      <div class="contact-row">
-        <a href="mailto:guru_raghavendra@berkeley.edu">guru_raghavendra@berkeley.edu</a>
-        <a href="https://www.linkedin.com/in/guru-raghavendra-a0304710/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/GuruR-prog" target="_blank" rel="noopener">GitHub</a>
-        <span class="loc">Greater Seattle Area</span>
+        <div class="contact-row">
+          <a href="mailto:guru_raghavendra@berkeley.edu">guru_raghavendra@berkeley.edu</a>
+          <a href="https://www.linkedin.com/in/guru-raghavendra-a0304710/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/GuruR-prog" target="_blank" rel="noopener">GitHub</a>
+          <span class="loc">Greater Seattle Area</span>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="assets/guru-closeup.jpg" alt="Guru Raghavendra" width="180" height="180">
       </div>
     </div>
   </section>
